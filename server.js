@@ -1,8 +1,17 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
-dotenv.config(); 
+const loadRoutes = require("./src/routes/index");
+dotenv.config();
 
-app.listen(process.env.PORT,()=>{
-    console.log(`server listened at port ${process.env.PORT}`);
+(async () => {
+  try {
+    await loadRoutes(app);
+  } catch (error) {
+    console.error("❌ Failed to initialize routes:", error.message);
+    process.exit(1);
+  }
+})();
+app.listen(process.env.PORT, () => {
+  console.log(`server listened at port ${process.env.PORT}`);
 });
