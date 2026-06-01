@@ -16,4 +16,4 @@ app.listen(process.env.PORT, () => {
   console.log(`server listened at port ${process.env.PORT}`); 
 });
 console.log("🚀 Server is starting...");
-console.log("🔧 Initializing routes...");
+console.log("🚀 Server is starting...");
