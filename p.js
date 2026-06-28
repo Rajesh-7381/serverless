@@ -137,3 +137,4 @@ const arr1 = [1,2,10,3];
 console.log(a);
 
 var a = 10;
+var b = 20;
