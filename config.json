@@ -1,0 +1,96 @@
+{
+  "timezone": "Asia/Kolkata",
+  "cron": "30 8 * * *",
+  "dailyLimit": 100,
+  "whatsappChunkLimit": 3500,
+  "enableEmail": false,
+  "enableWhatsApp": false,
+  "enableTerminal": true,
+  "targetCities": [
+    "ahmedabad",
+    "kolkata",
+    "bhubaneswar",
+    "bangalore",
+    "bengaluru",
+    "hyderabad",
+    "pune",
+    "chennai",
+    "visakhapatnam",
+    "vizag",
+    "mumbai",
+    "delhi",
+    "gurgaon",
+    "gurugram",
+    "noida",
+    "coimbatore",
+    "mysore",
+    "surat",
+    "vadodara",
+    "jaipur",
+    "remote",
+    "pan india",
+    "india"
+  ],
+  "keywords": [
+    "node.js",
+    "nodejs",
+    "node js",
+    "express.js",
+    "express js",
+    "javascript",
+    "rest",
+    "api",
+    "mysql",
+    "postgres",
+    "postgresql",
+    "docker",
+    "git",
+    "typescript",
+    "mongodb",
+    "redis"
+  ],
+  "exclude": [
+    "intern",
+    "fresher",
+    "trainee",
+    "frontend",
+    "ui developer",
+    "react only",
+    "senior",
+    "6 years",
+    "7 years",
+    "8 years",
+    "9 years",
+    "10 years",
+    "lead",
+    "manager",
+    "director",
+    "architect"
+  ],
+  "sources": [
+    {
+      "name": "Cutshort",
+      "type": "cutshort",
+      "enabled": true,
+      "url": "https://cutshort.io/jobs/nodejs-jobs"
+    },
+    {
+      "name": "Naukri",
+      "type": "naukri",
+      "enabled": true,
+      "url": "https://www.naukri.com/node-dot-js-developer-jobs-in-india"
+    },
+    {
+      "name": "Indeed",
+      "type": "indeed",
+      "enabled": false,
+      "url": "https://www.indeed.com/jobs?q=node+js+developer&l=India"
+    },
+    {
+      "name": "LinkedIn",
+      "type": "linkedin",
+      "enabled": false,
+      "url": "https://www.linkedin.com/jobs/search/?keywords=node%20js%20developer&location=India"
+    }
+  ]
+}

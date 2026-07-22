@@ -118,23 +118,119 @@ function findPair(arr, target) {
   for (let i = 0; i < arr.length; i++) {
     const complement = target - arr[i];
     if (map.has(complement)) {
-      
       return [complement, arr[i]];
     }
     map.set(arr[i], i);
     console.log(map);
   }
-  return null;P
+  return null;
+  P;
 }
 
-
 // )5 tricky question part sort the array by using sort method
-const arr1 = [1,2,10,3];
+const arr1 = [1, 2, 10, 3];
 // console.log(arr1.sort()); // [1, 10, 2, 3] because the sort method sorts the elements as strings by default, so "10" comes before "2" and "3". To sort the array numerically, you can provide a compare function:
 // console.log(arr1.sort((a, b) => a - b)); // [1, 2, 3, 10]
 // console.log(arr1.sort((a, b) => b - a)); // [10, 3, 2, 1]
 
-console.log(a);
+// console.log(a);
 
-var a = 10;
-var b = 20;
+// var a = 10;
+// var b = 20;
+// const a = {};
+
+// const b = {
+//   key: "b",
+// };
+
+// const c = {
+//   key: "c",
+// };
+
+// a[b] = 100;
+// a[c] = 200;
+
+// console.log(a[b]);
+// console.log(Boolean("")); // -> false
+// console.log(Boolean(" ")); //-> true
+// console.log(Boolean(true)); //-> true
+// console.log(Boolean(false)); //-> false
+// console.log(1 || "nnn", "ppppppppp"); //-> nnnn
+
+// let str = "987";
+// console.log(rev(str));
+// function rev(str) {
+//   return str.split("").reverse().join("")
+// }
+
+// just one mismatch in the below code
+// const arr2 = ["banaa", "bana",  "banaaa"];
+// const t = "banana";
+// console.log(findc(arr2, t));
+// function findc(arr, target) {
+//   let count = 0;
+//   let d=0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].length == target.length) {
+//       let a = arr[i].split("");
+//       let b = target.split("");
+//       console.log(a, b);
+//       for (let j = 0; j < a.length; j++) {
+//         if (a[j] !== b[j]) {
+//           count++;
+//           d = i
+//         }
+//       }
+//     }
+//   }
+//   if(count == 1) {
+//     return arr[d];
+//   }
+// }
+
+
+// const js = "jjvascript";
+// console.log(maxChar(js));
+// function maxChar(js){
+//   let obj = {};
+//   for(let i = 0;i<js.length;i++){
+//     if(obj[js[i]]){
+//       obj[js[i]]++;
+//     } else {
+//       obj[js[i]] = 1;
+//     }
+//   }
+//   for(const ch in obj) {
+//     if( obj[ch] == 1)  return ch;
+//   }
+// }
+
+// let a = { x: 1 };
+// let b = a;
+// console.log(a)
+// console.log(b)
+
+// b.x = 100;
+// console.log(a)
+// console.log(b)
+
+// console.log(a.x);
+
+// console.log(typeof NaN); // number
+// console.log(NaN == NaN);
+// console.log(NaN)
+// console.log(NaN === NaN);
+
+// for (let i = 0; i < 3; i++) {
+//     setTimeout(() => console.log(i), 0);
+// }
+
+// console.log([] + []);
+// console.log([] + {});
+// console.log({} + []);
+// console.log({} + {} );
+
+console.log([[[1]]] + [[[2]]]);
+console.log(aaaaaa);
+// console.log(b);
+var aaaaaa = b =200;
