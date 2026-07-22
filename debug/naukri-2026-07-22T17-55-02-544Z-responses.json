@@ -1,0 +1,152 @@
+[
+  {
+    "url": "https://www.naukri.com/jobapi/v1/ads/new/ff?adType=SRP_RP&deviceType=DESK",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"id\":33,\"title\":\"Get 3X more profile views from recruiters\",\"description\":\"Increase your chances of callback with Naukri FastForward\",\"cta\":\"Know More\",\"landingUrl\":\"https://resume.naukri.com/resume-display?fftid=naukri_srp\"}"
+  },
+  {
+    "url": "https://www.naukri.com/cloudgateway-mynaukri/abframework-services/v0/clients/experiments/desktop_srp_login_blocker_mfirst/variant",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"alternative\":{\"name\":\"blocker_screen_mfirst\"},\"experiment\":{\"name\":\"desktop_srp_login_blocker_mfirst\"},\"isArchived\":false,\"isWinner\":true}"
+  },
+  {
+    "url": "https://www.naukri.com/cloudgateway-mynaukri/abframework-services/v0/clients/experiments/Desktop_srp_login_blocker/variant",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"alternative\":{\"name\":\"blocker_screen\"},\"experiment\":{\"name\":\"desktop_srp_login_blocker\"},\"isArchived\":false,\"isWinner\":true}"
+  },
+  {
+    "url": "https://www.naukri.com/cloudgateway-mynaukri/abframework-services/v0/clients/experiments/S_TO_J_Job_Tuple/variant",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"alternative\":{\"name\":\"Control\"},\"experiment\":{\"name\":\"S_TO_J_Job_Tuple\"},\"isArchived\":false,\"isWinner\":true}"
+  },
+  {
+    "url": "https://www.naukri.com/jobapi/v1/ads/new/ff?adType=BELLY&deviceType=DESK",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"id\":63,\"title\":\"Increase your profile visibility up to 3 times\",\"description\":\"Become visible to more recruiters with Resume Display Service.\",\"cta\":\"Yes, I am interested\",\"landingUrl\":\"https://resume.naukri.com/resume-display?fftid=Desk_SRP_Belly_RD\"}"
+  },
+  {
+    "url": "https://www.naukri.com/cloudgateway-ccs/inventory-management-services/v2/page/pagename/ni-desktop-srp-homepage-v2",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"states\":{\"t520_click_submit\":0},\"ttl\":2090,\"id\":199,\"name\":\"ni-desktop-srp-homepage-v2\",\"version\":\"v2\",\"system\":\"ni\",\"app\":\"srp-homepage\",\"description\":\"Desktop SRP\",\"sets\":[],\"sections\":[{\"name\":\"tuple-1-section\",\"description\":null,\"position\":null,\"type\":0,\"order\":0,\"excludedInventories\":null,\"inventories\":[{\"name\":\"inventory-1\",\"description\":null,\"sold\":false,\"purchasable\":false,\"maxAllowedAds\":0,\"flow\":\"sequence\",\"rotation\":true,\"session\":false,\"layout\":\"default\",\"singleWidgetPerSession\":fa"
+  },
+  {
+    "url": "https://www.naukri.com/jobapi/v3/search?noOfResults=20&urlType=search_by_key_loc&searchType=adv&location=india&keyword=node%20.js%20developer&pageNo=1&seoKey=node-dot-js-developer-jobs-in-india&src=directSearch&latLong=",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"noOfJobs\":835,\"clusters\":{\"salaryRange\":[{\"id\":\"0to3\",\"count\":80,\"label\":\"0-3 Lakhs\"},{\"id\":\"3to6\",\"count\":486,\"label\":\"3-6 Lakhs\"},{\"id\":\"6to10\",\"count\":613,\"label\":\"6-10 Lakhs\"},{\"id\":\"10to15\",\"count\":255,\"label\":\"10-15 Lakhs\"},{\"id\":\"15to25\",\"count\":102,\"label\":\"15-25 Lakhs\"},{\"id\":\"25to50\",\"count\":65,\"label\":\"25-50 Lakhs\"},{\"id\":\"50to75\",\"count\":6,\"label\":\"50-75 Lakhs\"},{\"id\":\"75to100\",\"count\":1,\"label\":\"75-100 Lakhs\"}],\"promotedJobs\":[{\"id\":\"220726028235\"}],\"wfhType\":[{\"id\":\"0\",\"count\":79"
+  },
+  {
+    "url": "https://www.naukri.com/cloudgateway-ccs/inventory-management-services/v2/page/pagename/ni-desktop-srp-homepage-v2?partial=true&rules=true&sync=true",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"states\":{},\"ttl\":2090,\"id\":199,\"name\":\"ni-desktop-srp-homepage-v2\",\"version\":\"v2\",\"system\":\"ni\",\"app\":\"srp-homepage\",\"description\":\"Desktop SRP\",\"sets\":[],\"sections\":[{\"name\":\"section-4\",\"description\":\"\",\"position\":null,\"type\":0,\"order\":0,\"excludedInventories\":null,\"inventories\":[{\"name\":\"inventory-1\",\"description\":\"\",\"sold\":false,\"purchasable\":false,\"maxAllowedAds\":0,\"flow\":\"sequence\",\"rotation\":false,\"session\":false,\"layout\":\"default\",\"singleWidgetPerSession\":false,\"widgets\":[{\"name\":\"naukri"
+  },
+  {
+    "url": "https://www.naukri.com/cloudgateway-mynaukri/resman-aggregator-services/v1/gnbapi/config",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"cacheDuration\":\"14400000\",\"gnbIdentifier\":\"default\",\"dashboardAPIProperties\":\"aiInterviewEligibility\",\"gnbHeader\":{\"logo\":{\"parentAttr\":{\"className\":\"fl nLogo\",\"href\":\"https://www.naukri.com\",\"alt\":\"Naukri Logo\"},\"attr\":{\"data-ga-track\":\"Naukri Logo|Naukri Logo\"},\"imageURLs\":{\"naukri\":\"https://static.naukimg.com/s/0/0/i/naukri-identity/naukri_gnb_logo.svg\",\"naukriPremium\":\"https://static.naukimg.com/s/0/0/i/naukri-identity/naukri_gnb_logo.svg\",\"naukriInternational\":\"https://static.naukimg.com/"
+  },
+  {
+    "url": "https://static.naukimg.com/s/9/121/_next/static/gnb/j/vendors~ni-desktop-gnb-notif-center-revamped~ni-gnb-drawer~ni-gnb-notif-center~ni-gnb-search-bar.cee72e6a.min.js",
+    "status": 200,
+    "contentType": "application/x-javascript",
+    "textHead": "(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{54:function(e,t,r){\"use strict\";r.d(t,\"b\",function(){return f}),r.d(t,\"c\",function(){return d}),r.d(t,\"d\",function(){return h});var n=r(0),i=r.n(n),o=r(68),a=r(3),l=r.n(a),u=r(84),c={insert:\"head\",singleton:!1},s=(l()(u.a,c),u.a.locals,function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&\"function\"==typeof Object.getOwnPropertySymbols){var i=0;for(n=Object.getOwnPropertySy"
+  },
+  {
+    "url": "https://static.naukimg.com/s/9/121/_next/static/gnb/j/vendors~ni-gnb-search-bar.6fb99408.min.js",
+    "status": 200,
+    "contentType": "application/x-javascript",
+    "textHead": "(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{124:function(e,t,r){\"use strict\";var n=r(0),o=r.n(n);function a(e,t){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){var r=null==e?null:\"undefined\"!=typeof Symbol&&e[Symbol.iterator]||e[\"@@iterator\"];if(null!=r){var n,o,a,i,l=[],s=!0,c=!1;try{if(a=(r=r.call(e)).next,0===t){if(Object(r)!==r)return;s=!1}else for(;!(s=(n=a.call(r)).done)&&(l.push(n.value),l.length!==t);s=!0);}catch(e){c=!0,o=e}finally{try{if(!s&&null!=r.re"
+  },
+  {
+    "url": "https://static.naukimg.com/s/9/121/_next/static/gnb/j/ni-gnb-search-bar.4a1e6db1.min.js",
+    "status": 200,
+    "contentType": "application/x-javascript",
+    "textHead": "(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{123:function(e,a,r){\"use strict\";var t=r(4),n=r.n(t)()(function(e){return e[1]});n.push([e.i,\"#nI-gNb-google-one-tap{height:100vh;left:0;position:fixed;top:0;width:100vh;z-index:1001}#nI-gNb-google-one-tap__container{bottom:0;left:0;position:fixed;z-index:999}\",\"\"]),n.locals={\"google-one-tap\":\"nI-gNb-google-one-tap\",\"google-one-tap__container\":\"nI-gNb-google-one-tap__container\"},a.a=n},126:function(e,a,r){\"use strict\";r.r(a);var t=r(2),n="
+  },
+  {
+    "url": "https://www.naukri.com/jobapi/v1/ads/new/dfp?&urlType=search_by_key_loc&searchType=adv&location=india&keyword=node%20.js%20developer",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"params\":{\"Profile-CTC\":\"0.0\",\"Profile-KeySkills\":\"\",\"Profile-Gender\":\"\",\"Profile-FAREA\":\"\",\"Profile-Role\":\"\",\"Profile-Experience\":\"0.0\",\"Profile-PG-Course\":\"\",\"Profile-PG-Spl\":\"\",\"Profile-PG-yearpass\":\"\",\"Profile-PG-percent\":\"\",\"Profile-UG-Course\":\"\",\"Profile-UG-spl\":\"\",\"Profile-UG-yearpass\":\"\",\"Profile-UG-percent\":\"\",\"Profile-Location\":\"\",\"Profile-Pref-Loc\":\"\",\"Profile-Industry\":\"\",\"Profile-ApplyTag\":\"\",\"Profile-Tag\":\"\",\"Profile-OpenTag\":\"\",\"Profile-Cookie\":\"\",\"Profile-Registerdays\":\"\",\"Profi"
+  },
+  {
+    "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gpt&tv=m202607160101&st=env&sjk=2392960813234263",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "textHead": "{\"sodar_query_id\":\"_QNhav_2POOkjuMPyuKK6Qk\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"10WLkfeJhofpnSrXRzrzHx42ZQqBiFhItR0kAo99_co\",\"bg_binary\":\"ehej6wDyLN+WziHPf1R90IzgzSea1iAJ2tDLQKagSSv/7pWmPojSSg9mOUxqX9RFNVYySJgRuSteXMyz4Y74pGtuPyYYHEOeJaInJsIedOlFRhRFljM9betlwIJqow1N2UR9nJmXjPmAtZ6EpvS5LkEdUVhrugbG30fLpC+1JkSdMAoLFnu598zwbaypUL66fWIruLBwyZsEl/76Ch6bp1j2348OzCjOnbm6u8Z57lcH3BmDMTVkiUQca7E73MRDLBVWAiZFnQ1dAEsBhgTIqDtZvtIX77e17Tg8+n20NqaKdvbnuly03no+4uEXm0tM91E/vqFeis5El7Qp38co2YpMMFvib"
+  },
+  {
+    "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/10857553821/?random=1784742906771&cv=11&fst=1784742906771&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be67l0v9165556708z86678154za20gzb6678154zd6678154xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938469~118897920~118897930~119773332~119896802&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.naukri.com%2Fnode-dot-js-developer-jobs-in-india&rcb=8&frm=0&tiba=Node%20.js%20Developer%20Jobs%20In%20India%20-%20835%20Node%20.js%20Developer%20Job%20Vacancies%20In%20India%20-%20Naukri.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1764416801.1784742907&uaa=x86&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.129%7CGoogle%2520Chrome%3B150.0.7871.129&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+    "status": 200,
+    "contentType": "text/javascript; charset=utf-8",
+    "textHead": "(function(){var s = {};(function(){var k=typeof Object.defineProperties==\"function\"?Object.defineProperty:function(b,d,a){if(b==Array.prototype||b==Object.prototype)return b;b[d]=a.value;return b};function l(b){b=[\"object\"==typeof globalThis&&globalThis,b,\"object\"==typeof window&&window,\"object\"==typeof self&&self,\"object\"==typeof global&&global];for(var d=0;d<b.length;++d){var a=b[d];if(a&&a.Math==Math)return a}throw Error(\"Cannot find global object\");} var p=l(this),q=typeof Symbol===\"function"
+  },
+  {
+    "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/854187457/?random=1784742906894&cv=11&fst=1784742906894&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be67l0v881815842z86678154za20gzb6678154zd6678154xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~119773331~119896802&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.naukri.com%2Fnode-dot-js-developer-jobs-in-india&rcb=19&frm=0&tiba=Node%20.js%20Developer%20Jobs%20In%20India%20-%20835%20Node%20.js%20Developer%20Job%20Vacancies%20In%20India%20-%20Naukri.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1764416801.1784742907&uaa=x86&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.129%7CGoogle%2520Chrome%3B150.0.7871.129&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+    "status": 200,
+    "contentType": "text/javascript; charset=utf-8",
+    "textHead": "(function(){var s = {};(function(){var k=typeof Object.defineProperties==\"function\"?Object.defineProperty:function(b,d,a){if(b==Array.prototype||b==Object.prototype)return b;b[d]=a.value;return b};function l(b){b=[\"object\"==typeof globalThis&&globalThis,b,\"object\"==typeof window&&window,\"object\"==typeof self&&self,\"object\"==typeof global&&global];for(var d=0;d<b.length;++d){var a=b[d];if(a&&a.Math==Math)return a}throw Error(\"Cannot find global object\");} var p=l(this),q=typeof Symbol===\"function"
+  },
+  {
+    "url": "https://www.googleadservices.com/ccm/conversion/854187457/?random=1784742906939&cv=11&fst=1784742906939&fmt=3&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be67l0v881815842za20gzb6678154zd6678154xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~119773331~119896802&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.naukri.com%2Fnode-dot-js-developer-jobs-in-india&rcb=19&capi=1&frm=0&tiba=Node%20.js%20Developer%20Jobs%20In%20India%20-%20835%20Node%20.js%20Developer%20Job%20Vacancies%20In%20India%20-%20Naukri.com&npa=0&pscdl=noapi&auid=1764416801.1784742907&label=RRSxCMClxKgDEMG7p5cD&hn=www.googleadservices.com&uaa=x86&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.129%7CGoogle%2520Chrome%3B150.0.7871.129&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&ec_mode=a&oid=301355912.1784742907&oidsrc=3&ecsid2=1333686741.1784742907&_tu=ABA&gcl_ctr=1~0~0~0&data=event%3Dgtag.config&em=tv.1&emd=tvd.1",
+    "status": 200,
+    "contentType": "image/gif",
+    "textHead": "GIF89a\u0001\u0000\u0001\u0000��\u0000���\u0000\u0000\u0000,\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000\u0000\u0002\u0002D\u0001\u0000;"
+  },
+  {
+    "url": "https://www.google.com/pagead/1p-user-list/854187457/?random=1784742906894&cv=11&fst=1784739600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be67l0v881815842z86678154za20gzb6678154zd6678154xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~119773331~119896802&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.naukri.com%2Fnode-dot-js-developer-jobs-in-india&rcb=19&frm=0&tiba=Node%20.js%20Developer%20Jobs%20In%20India%20-%20835%20Node%20.js%20Developer%20Job%20Vacancies%20In%20India%20-%20Naukri.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1764416801.1784742907&uaa=x86&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.129%7CGoogle%2520Chrome%3B150.0.7871.129&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-QEAEQoqgdwAHysPq39bn3uE1pVEECoOA6iHwPX55dSY3h_4-5z6J-TPRJ625q-tqbJqFjBy83ykGaaIqdjUl2Cpyaiakz7rTL7D0QbN-yhZMYNM9jCaA-3oKQLiikJIdbZFpjB6WXkXmbL-ODLxn2w3TU1_xmdc3IIYHiyjUtfzomzvPdB1BxqnBCbNXgjo9jBqW2yhETKduJcNAvsRMf7P3_rg1xrJrLX-ZeXclH_Kn6jmmR20T2M6xHxvRDodCXUVOuoO6yVENDtqYyqY3GF5GuNpJLHjB3iqAio8skZf6Xv-lPLTOFUxQ1Iedl0mMfwbslYy2udleP4&random=3000002283&rmt_tld=0&ipr=y",
+    "status": 200,
+    "contentType": "image/gif",
+    "textHead": "GIF89a\u0001\u0000\u0001\u0000�\u0000\u0000\u0000\u0000\u0000���!�\u0004\u0001\u0000\u0000\u0000\u0000,\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000\u0000\u0002\u0001D\u0000;"
+  },
+  {
+    "url": "https://www.google.com/pagead/1p-user-list/10857553821/?random=1784742906771&cv=11&fst=1784739600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be67l0v9165556708z86678154za20gzb6678154zd6678154xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938469~118897920~118897930~119773332~119896802&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.naukri.com%2Fnode-dot-js-developer-jobs-in-india&rcb=8&frm=0&tiba=Node%20.js%20Developer%20Jobs%20In%20India%20-%20835%20Node%20.js%20Developer%20Job%20Vacancies%20In%20India%20-%20Naukri.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1764416801.1784742907&uaa=x86&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.129%7CGoogle%2520Chrome%3B150.0.7871.129&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-QEAEQoqgSOeEiwz4UL-2npmEfv5XMHRtVWX7qvL4cGQQV2W35Gz0XzoOk5lxSD7ENZQKdYBtygrNXTvR5eMh12ofbTnDEki2Gf6e6ZObi-qI2sjL3deqpMKaGKrAaezi3VeOv-KEL9uvxiVVIzyD7tpdA2fopwB-VR1zLQNAH73H5peeP8nA7xvcRPYNbI6drLT0FwZRuDaqM4YCTeFeLBEB8Kyd0ZsrLNimeCSUC3gsGCDlHHXL3-mWuFK30C7rQ5ItHKUdmkLhVsr7P2aIadlsTbQv4NNnDNXUAzaphUNZXq-Gc65N_RL-CzvVkYP-59ImYPMUX26BL8&random=1055280680&rmt_tld=0&ipr=y",
+    "status": 200,
+    "contentType": "image/gif",
+    "textHead": "GIF89a\u0001\u0000\u0001\u0000�\u0000\u0000\u0000\u0000\u0000���!�\u0004\u0001\u0000\u0000\u0000\u0000,\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000\u0000\u0002\u0001D\u0000;"
+  },
+  {
+    "url": "https://www.googleadservices.com/pagead/conversion/854187457/?random=1784742906939&cv=11&fst=1784742906939&fmt=7&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be67l0v881815842za20gzb6678154zd6678154xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~119773331~119896802&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.naukri.com%2Fnode-dot-js-developer-jobs-in-india&rcb=19&capi=1&frm=0&tiba=Node%20.js%20Developer%20Jobs%20In%20India%20-%20835%20Node%20.js%20Developer%20Job%20Vacancies%20In%20India%20-%20Naukri.com&npa=0&pscdl=noapi&auid=1764416801.1784742907&label=RRSxCMClxKgDEMG7p5cD&hn=www.googleadservices.com&uaa=x86&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.129%7CGoogle%2520Chrome%3B150.0.7871.129&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&ec_mode=a&oid=301355912.1784742907&oidsrc=3&ecsid2=1333686741.1784742907&_tu=ABA&gcl_ctr=1~0~0~0&data=event%3Dgtag.config&category=acrcp_v1_512&em=tv.1&emd=tvd.1&ept=5",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "textHead": "event: message\ndata: {\"fetch\":[\"https://googleads.g.doubleclick.net/pagead/viewthroughconversion/854187457/?random=1463147004&cv=11&fst=1784742906939&fmt=8&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be67l0v881815842za20gzb6678154zd6678154xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~119773331~119896802&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.naukri.com%2Fnode-dot-js-developer-jobs-in-india&rcb=19&capi=1&frm=0&tiba=Node%20.js%20Developer%20Jobs%20In%20India"
+  },
+  {
+    "url": "https://www.google.co.in/pagead/1p-user-list/10857553821/?random=1784742906771&cv=11&fst=1784739600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be67l0v9165556708z86678154za20gzb6678154zd6678154xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938469~118897920~118897930~119773332~119896802&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.naukri.com%2Fnode-dot-js-developer-jobs-in-india&rcb=8&frm=0&tiba=Node%20.js%20Developer%20Jobs%20In%20India%20-%20835%20Node%20.js%20Developer%20Job%20Vacancies%20In%20India%20-%20Naukri.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1764416801.1784742907&uaa=x86&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.129%7CGoogle%2520Chrome%3B150.0.7871.129&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-QEAEQoqgSOeEiwz4UL-2npmEfv5XMHRtVWX7qvL4cGQQV2W35Gz0XzoOk5lxSD7ENZQKdYBtygrNXTvR5eMh12ofbTnDEki2Gf6e6ZObi-qI2sjL3deqpMKaGKrAaezi3VeOv-KEL9uvxiVVIzyD7tpdA2fopwB-VR1zLQNAH73H5peeP8nA7xvcRPYNbI6drLT0FwZRuDaqM4YCTeFeLBEB8Kyd0ZsrLNimeCSUC3gsGCDlHHXL3-mWuFK30C7rQ5ItHKUdmkLhVsr7P2aIadlsTbQv4NNnDNXUAzaphUNZXq-Gc65N_RL-CzvVkYP-59ImYPMUX26BL8&random=1055280680&rmt_tld=1&ipr=y",
+    "status": 200,
+    "contentType": "image/gif",
+    "textHead": "GIF89a\u0001\u0000\u0001\u0000�\u0000\u0000\u0000\u0000\u0000���!�\u0004\u0001\u0000\u0000\u0000\u0000,\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000\u0000\u0002\u0001D\u0000;"
+  },
+  {
+    "url": "https://www.google.co.in/pagead/1p-user-list/854187457/?random=1784742906894&cv=11&fst=1784739600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be67l0v881815842z86678154za20gzb6678154zd6678154xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938469~118897920~118897930~119773331~119896802&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.naukri.com%2Fnode-dot-js-developer-jobs-in-india&rcb=19&frm=0&tiba=Node%20.js%20Developer%20Jobs%20In%20India%20-%20835%20Node%20.js%20Developer%20Job%20Vacancies%20In%20India%20-%20Naukri.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1764416801.1784742907&uaa=x86&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.129%7CGoogle%2520Chrome%3B150.0.7871.129&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-QEAEQoqgdwAHysPq39bn3uE1pVEECoOA6iHwPX55dSY3h_4-5z6J-TPRJ625q-tqbJqFjBy83ykGaaIqdjUl2Cpyaiakz7rTL7D0QbN-yhZMYNM9jCaA-3oKQLiikJIdbZFpjB6WXkXmbL-ODLxn2w3TU1_xmdc3IIYHiyjUtfzomzvPdB1BxqnBCbNXgjo9jBqW2yhETKduJcNAvsRMf7P3_rg1xrJrLX-ZeXclH_Kn6jmmR20T2M6xHxvRDodCXUVOuoO6yVENDtqYyqY3GF5GuNpJLHjB3iqAio8skZf6Xv-lPLTOFUxQ1Iedl0mMfwbslYy2udleP4&random=3000002283&rmt_tld=1&ipr=y",
+    "status": 200,
+    "contentType": "image/gif",
+    "textHead": "GIF89a\u0001\u0000\u0001\u0000�\u0000\u0000\u0000\u0000\u0000���!�\u0004\u0001\u0000\u0000\u0000\u0000,\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000\u0000\u0002\u0001D\u0000;"
+  },
+  {
+    "url": "https://www.naukri.com/cloudgateway-ccs/inventory-management-services/v2/page/pagename/ni-desktop-srp-homepage-v2?partial=true&rules=true&sync=true",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"states\":{},\"ttl\":2089,\"id\":199,\"name\":\"ni-desktop-srp-homepage-v2\",\"version\":\"v2\",\"system\":\"ni\",\"app\":\"srp-homepage\",\"description\":\"Desktop SRP\",\"sets\":[],\"sections\":[{\"name\":\"tuple-3-section\",\"description\":\"\",\"position\":null,\"type\":0,\"order\":0,\"excludedInventories\":null,\"inventories\":[{\"name\":\"inventory-1\",\"description\":\"\",\"sold\":true,\"purchasable\":true,\"maxAllowedAds\":0,\"flow\":\"sequence\",\"rotation\":true,\"session\":false,\"layout\":\"default\",\"singleWidgetPerSession\":false,\"widgets\":[{\"name\":\"ni-"
+  },
+  {
+    "url": "https://www.google.com/recaptcha/api2/aframe",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "textHead": "<!DOCTYPE HTML><html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\"></head><body><script nonce=\"fehF6OZYknofAVywCMmYcw\">/** Anti-fraud and anti-abuse applications only. See google.com/recaptcha */ try{var clients={'sodar':'https://pagead2.googlesyndication.com/pagead/sodar?'};window.addEventListener(\"message\",function(a){try{if(a.source===window.parent){var b=JSON.parse(a.data);var c=clients[b['id']];if(c){var d=document.createElement('img');d.src=c+b['params']+'&rc='+("
+  },
+  {
+    "url": "https://www.naukri.com/cloudgateway-ccs/inventory-management-services/v2/page/pagename/ni-desktop-srp-homepage-v2?partial=true&rules=true&sync=true",
+    "status": 200,
+    "contentType": "application/json",
+    "textHead": "{\"states\":{},\"ttl\":2089,\"id\":199,\"name\":\"ni-desktop-srp-homepage-v2\",\"version\":\"v2\",\"system\":\"ni\",\"app\":\"srp-homepage\",\"description\":\"Desktop SRP\",\"sets\":[],\"sections\":[{\"name\":\"tuple-7-section\",\"description\":\"\",\"position\":null,\"type\":0,\"order\":0,\"excludedInventories\":null,\"inventories\":[{\"name\":\"inventory-1\",\"description\":\"\",\"sold\":true,\"purchasable\":true,\"maxAllowedAds\":0,\"flow\":\"sequence\",\"rotation\":true,\"session\":false,\"layout\":\"default\",\"singleWidgetPerSession\":false,\"widgets\":[{\"name\":\"job"
+  }
+]
