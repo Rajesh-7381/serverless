@@ -1,9 +1,13 @@
 const cutshort = require("./cutshort");
 const naukri = require("./naukri");
+const indeed = require("./indeed");
+const linkedin = require("./linkedin");
 
 const handlers = {
   cutshort,
-  naukri
+  naukri,
+  indeed,
+  linkedin
 };
 
 async function collectByType(type, page, config, debug) {

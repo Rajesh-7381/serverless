@@ -1,26 +1,54 @@
-const yahooFinance = require('yahoo-finance2').default;
+const axios = require('axios');
 const logger = require('../utils/logger');
 
-class YahooProvider {
-  async getHistoricalData(symbol, period = '1mo', interval = '1d') {
+class MarketProvider {
+  async getHistoricalData(symbol) {
     try {
-      const queryOptions = { period1: '2024-01-01' }; // dynamic in real use
-      const result = await yahooFinance.historical(symbol, queryOptions);
-      return result;
+      logger.info(`Fetching real data for ${symbol}`);
+
+      // Using a public API (you can change to Alpha Vantage later)
+      const response = await axios.get(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}`, {
+        params: {
+          interval: '1d',
+          range: '3mo'
+        },
+        timeout: 10000
+      });
+
+      const result = response.data.chart.result[0];
+      const timestamps = result.timestamp;
+      const quotes = result.indicators.quote[0];
+
+      const data = timestamps.map((time, i) => ({
+        date: new Date(time * 1000).toISOString().split('T')[0],
+        close: quotes.close[i],
+        open: quotes.open[i],
+        high: quotes.high[i],
+        low: quotes.low[i]
+      }));
+
+      logger.info(`✅ ${symbol}: ${data.length} candles loaded`);
+      return data;
     } catch (error) {
-      logger.error(`Yahoo Finance error for ${symbol}:`, error.message);
+      logger.error(`Failed to fetch ${symbol}: ${error.message}`);
       return [];
     }
   }
 
   async getQuote(symbol) {
     try {
-      return await yahooFinance.quote(symbol);
+      const response = await axios.get(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1d`);
+      const quote = response.data.chart.result[0].meta;
+      return {
+        symbol,
+        price: quote.regularMarketPrice,
+        changePercent: quote.regularMarketChangePercent
+      };
     } catch (error) {
-      logger.error(`Quote error ${symbol}:`, error);
+      logger.error(`Quote failed for ${symbol}`);
       return null;
     }
   }
 }
 
-module.exports = new YahooProvider();
+module.exports = new MarketProvider();
