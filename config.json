@@ -81,15 +81,15 @@
       "url": "https://www.naukri.com/node-dot-js-developer-jobs-in-india"
     },
     {
-      "name": "Indeed",
+      "name": "Indeed/Remote",
       "type": "indeed",
-      "enabled": false,
-      "url": "https://www.indeed.com/jobs?q=node+js+developer&l=India"
+      "enabled": true,
+      "url": "https://remoteok.com/api"
     },
     {
       "name": "LinkedIn",
       "type": "linkedin",
-      "enabled": false,
+      "enabled": true,
       "url": "https://www.linkedin.com/jobs/search/?keywords=node%20js%20developer&location=India"
     }
   ]

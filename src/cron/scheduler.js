@@ -1,5 +1,5 @@
 const cron = require('node-cron');
-const { dailyRecommendationCron, enabled } = require('../config/scheduler.config');
+const { dailyRecommendationCron, enabled } = require("../config/scheduler.config");
 const recommendationJob = require('../jobs/stockRecommendation.job');
 const logger = require('../utils/logger');
 

@@ -1,6 +1,5 @@
 const marketDataService = require('./marketData.service');
 const technicalService = require('./technicalIndicator.service');
-const notificationService = require('./notification.service');
 const logger = require('../utils/logger');
 
 class RecommendationService {
@@ -11,41 +10,68 @@ class RecommendationService {
 
     for (const symbol of marketDataService.getSymbols()) {
       try {
-        const data = await marketDataService.getHistoricalData(symbol);
-        const analysis = await technicalService.analyzeStock(symbol, data);
+        const historicalData = await marketDataService.getHistoricalData(symbol);
+        
+        if (historicalData.length < 20) {
+          logger.warn(`Not enough data for ${symbol}`);
+          recommendations.push({
+            symbol,
+            recommendation: "HOLD",
+            confidence: 40,
+            reason: "Insufficient data",
+            date: new Date().toISOString().split('T')[0]
+          });
+          continue;
+        }
 
-        const finalRecommendation = this.aggregateSignals(analysis);
+        const analysis = await technicalService.analyzeStock(symbol, historicalData);
+        const finalRec = this.aggregateRecommendations(analysis);
 
         recommendations.push({
           symbol,
-          recommendation: finalRecommendation,
-          confidence: this.calculateConfidence(analysis),
+          recommendation: finalRec.recommendation,
+          confidence: finalRec.confidence,
+          analysis: {
+            rsi: analysis.rsi?.signal,
+            ema: analysis.ema?.signal,
+            breakout: analysis.breakout?.signal
+          },
           date: new Date().toISOString().split('T')[0]
         });
+
       } catch (err) {
-        logger.error(`Failed to analyze ${symbol}`, err);
+        logger.error(`Error analyzing ${symbol}:`, err.message);
       }
     }
 
-    await notificationService.sendRecommendations(recommendations);
     logger.info(`✅ Generated ${recommendations.length} recommendations`);
     return recommendations;
   }
 
-  aggregateSignals(analysis) {
-    // Weighted scoring logic - make dynamic via config later
-    let score = 0;
-    if (analysis.rsi.signal === 'BUY') score += 40;
-    if (analysis.ema.signal === 'BUY') score += 30;
-    if (analysis.breakout.signal === 'BUY') score += 30;
+  aggregateRecommendations(analysis) {
+    let score = 50;
 
-    return score > 70 ? 'STRONG BUY' : score > 50 ? 'BUY' : score < 30 ? 'SELL' : 'HOLD';
-  }
+    // RSI
+    if (analysis.rsi?.signal === 'BUY') score += 25;
+    else if (analysis.rsi?.signal === 'SELL') score -= 20;
 
-  calculateConfidence(analysis) {
-    return Math.min(95, Math.round(
-      (analysis.rsi.score + (analysis.ema.score || 50) + (analysis.breakout.score || 50)) / 3
-    ));
+    // EMA
+    if (analysis.ema?.signal === 'BUY') score += 20;
+    else if (analysis.ema?.signal === 'SELL') score -= 15;
+
+    // Breakout
+    if (analysis.breakout?.signal === 'BUY') score += 25;
+    else if (analysis.breakout?.signal === 'SELL') score -= 20;
+
+    let recommendation = 'HOLD';
+    if (score >= 75) recommendation = 'STRONG BUY';
+    else if (score >= 60) recommendation = 'BUY';
+    else if (score <= 35) recommendation = 'SELL';
+
+    return {
+      recommendation,
+      confidence: Math.max(30, Math.min(95, Math.round(score)))
+    };
   }
 }
 

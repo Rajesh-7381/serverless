@@ -1,0 +1,8 @@
+[
+  {
+    "url": "https://challenges.cloudflare.com/turnstile/v0/g/128f79a146dd/api.js?onload=pQPC7&render=explicit",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "textHead": "\"use strict\";(function(){function mn(e,t,r,n,a,u,d){try{var c=e[u](d),p=c.value}catch(f){r(f);return}c.done?t(p):Promise.resolve(p).then(n,a)}function gn(e){return function(){var t=this,r=arguments;return new Promise(function(n,a){var u=e.apply(t,r);function d(p){mn(u,n,a,d,c,\"next\",p)}function c(p){mn(u,n,a,d,c,\"throw\",p)}d(void 0)})}}function $(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}function w(e,t){\"@swc/helpers - instanceof"
+  }
+]

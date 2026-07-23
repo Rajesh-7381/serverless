@@ -7,6 +7,7 @@ const { chromium } = require("playwright");
 const nodemailer = require("nodemailer");
 const cron = require("node-cron");
 const axios = require("axios");
+const { collectByType } = require("./src/handlers");
 
 const CONFIG_PATH = path.join(__dirname, "config.json");
 const DEBUG_DIR = path.join(__dirname, "debug");
@@ -114,17 +115,6 @@ function reloadConfig() {
   } catch (err) {
     log("[CONFIG ERROR]", err.message);
     return false;
-  }
-}
-
-function watchConfigFile() {
-  try {
-    fs.watch(CONFIG_PATH, { persistent: true }, () => {
-      setTimeout(() => reloadConfig(), 200);
-    });
-    log("[CONFIG WATCHER] active");
-  } catch (err) {
-    log("[CONFIG WATCHER ERROR]", err.message);
   }
 }
 
@@ -485,7 +475,15 @@ async function collectJobs() {
     const all = [];
 
     for (const source of enabled) {
-      all.push(...(await collectSource(page, source)));
+      // Use dedicated handler if type is registered, else fall back to generic scraper
+      const sourceRows = await collectByType(source.type, page, config, config.debug).catch(() => []);
+      if (sourceRows.length > 0) {
+        log(`[HANDLER] ${source.name} rows=${sourceRows.length}`);
+        all.push(...sourceRows);
+      } else {
+        // Fallback to generic collector
+        all.push(...(await collectSource(page, source)));
+      }
     }
 
     return all;
