@@ -37,7 +37,9 @@ let jobRunning = false;
 let lastConfigHash = "";
 
 function nowStamp() {
-  return new Date().toISOString().replace(/[:.]/g, "-");
+  const date = new Date().toISOString().replace(/[:.]/g, "-");
+  console.log("[TIMESTAMP]", date);
+  return date;
 }
 
 function log(...args) {
