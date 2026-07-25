@@ -234,3 +234,44 @@ console.log([[[1]]] + [[[2]]]);
 console.log(aaaaaa);
 // console.log(b);
 var aaaaaa = b =200;
+
+
+const employes = [
+  { name: "John", dept: "backend" },
+  { name: "Jane", dept: "backend" },
+  { name: "Bob", dept: "devops" },
+];
+
+// i want group by dept
+const groupByDept = employes.reduce((acc, curr)=> {
+  if(!acc[curr.dept]) {
+    acc[curr.dept] = [];
+  }
+  acc[curr.dept].push(curr);
+  return acc;
+}, {});
+console.log(groupByDept);
+
+// ==========================================system design question========================
+
+// 1) When a user clicks "Logout from All Devices, the backend should perform the following steps:
+// ans:
+  // [Client] ---> POST /api/logout-all ---> [Backend API]
+  //                                           │
+  //                                           ▼
+  //                              [1. Authenticate Request]
+  //                                           │
+  //                                           ▼
+  //                            [2. DB: increment token_version]
+  //                                 (e.g., version 1 -> 2)
+  //                                           │
+  //                                           ▼
+  //                            [3. DB/Redis: Delete all Refresh Tokens]
+  //                                           │
+  //                                           ▼
+  //                             [4. Clear Cookies / Return 200 OK]
+
+// ==================================================// interview tricky question with answer =========================
+console.log(new Date() == new Date()) // because each new Date() creates a new object, and two different objects are never equal in JavaScript, even if they represent the same date and time. Therefore, the comparison returns false.
+console.log([] == false); // true, because when comparing an array to a boolean, JavaScript first converts the array to a primitive value. An empty array is converted to an empty string, which is then converted to false when compared to a boolean. Therefore, the comparison returns true.
+console.log([] == ![]); // true, because ![] evaluates to false, and [] is converted to an empty string, which is also falsy. Therefore, the comparison returns true.

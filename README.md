@@ -89,3 +89,29 @@ Phase 2 → Data Layer
 Phase 3 → Technical Analysis
 Phase 4 → Recommendation Engine
 Phase 5 → Scheduler
+
+
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------- # for jobs -----------------------------------------------------------------------
+| Day | What to develop                                         | Output for that day                                       |
+| --- | ------------------------------------------------------- | --------------------------------------------------------- |
+| 1   | Freeze the current codebase and clean folder structure. | Stable folders, backup copy, clear source list.           |
+| 2   | Make config fully source-driven.                        | config.json controls all enabled sources and options.     |
+| 3   | Standardize common utility functions.                   | Shared helpers for clean text, scoring, date, and URLs.   |
+| 4   | Finalize the core runner flow.                          | job-alert.js only orchestrates, no scraping logic inside. |
+| 5   | Make Cutshort extraction reliable.                      | Cutshort rows with real Apply Link.                       |
+| 6   | Make Naukri extraction reliable.                        | Naukri rows with real Apply Link.                         |
+| 7   | Make logging and debug files cleaner.                   | Better debug output for failures.                         |
+| 8   | Add result validation and stronger filters.             | Better quality rows, fewer false matches.                 |
+| 9   | Build Indeed handler.                                   | Indeed source working in config.                          |
+| 10  | Build LinkedIn handler.                                 | LinkedIn source working in config.                        |
+| 11  | Add source registry system.                             | Future sources can be added with one new file.            |
+| 12  | Add retry and timeout improvements.                     | Fewer failures on slow pages.                             |
+| 13  | Add better dedupe logic.                                | Duplicate jobs reduced across sources.                    |
+| 14  | Add report formatting cleanup.                          | Cleaner email and WhatsApp output.                        |
+| 15  | Add test/dry-run mode.                                  | Safe mode for checking output without sending.            |
+| 16  | Add run summary metrics.                                | Counts for raw, deduped, filtered, sent.                  |
+| 17  | Add failure recovery and fallback behavior.             | One bad source won’t break the full run.                  |
+| 18  | Add deployment readiness checks.                        | Startup checks, missing env checks, config checks.        |
+| 19  | Do full end-to-end testing.                             | All enabled sources run together smoothly.                |
+| 20  | Final polish and release version.                       | Clean stable version ready for daily use.                 |

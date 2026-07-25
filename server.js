@@ -1,32 +1,73 @@
-const express = require("express");
 const dotenv = require("dotenv");
-const app = express();
-const logger = require("./src/utils/logger");
-const scheduler = require("./src/cron/scheduler");
-const { port } = require("./src/config/app.config");
-const websocketService = require('./src/services/websocket.service');
-websocketService.init();
-
 dotenv.config();
 
-const startServer = async () => {
-  try {
-    // Load routes dynamically
-    const loadRoutes = require("./src/routes/index");
-    await loadRoutes(app);
+const express = require("express");
+const app = express();
 
-    // Initialize scheduler (cron jobs)
+const logger = require("./src/utils/logger");
+const scheduler = require("./src/cron/scheduler");
+const websocketService = require("./src/services/websocket.service");
+const loadRoutes = require("./src/routes");
+const { sequelize } = require("./src/model");
+const { port } = require("./src/config/app.config");
+
+async function bootstrap() {
+  try {
+    logger.info("🚀 Starting Application...");
+
+    // ==============================
+    // Database Connection
+    // ==============================
+    await sequelize.authenticate();
+    logger.info("✅ Database Connected");
+    logger.info("Before Sync");
+
+await sequelize.sync({ alter: true });
+
+logger.info("After Sync");
+
+    // ==============================
+    // Sync Models (Development Only)
+    // ==============================
+    if (process.env.NODE_ENV !== "production") {
+      await sequelize.sync({ alter: true });
+      logger.info("✅ Database Synced");
+    }
+
+    // ==============================
+    // Express Middleware
+    // ==============================
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
+
+    // ==============================
+    // Load Routes
+    // ==============================
+    await loadRoutes(app);
+    logger.info("✅ Routes Loaded");
+
+    // ==============================
+    // Scheduler
+    // ==============================
     scheduler.init();
 
-    app.listen(port, () => {
-      logger.info(`🚀 Server running on port ${port} | ENV: ${process.env.NODE_ENV || 'development'}`);
-      console.log(`Server listening at http://localhost:${port}`);
-    });
+    // ==============================
+    // WebSocket
+    // ==============================
+    await websocketService.init();
 
+    // ==============================
+    // Start Server
+    // ==============================
+    app.listen(port, () => {
+      logger.info(
+        `🚀 Server running on http://localhost:${port} (${process.env.NODE_ENV})`
+      );
+    });
   } catch (error) {
-    logger.error("❌ Failed to start application:", error);
+    logger.error("❌ Application Startup Failed", error);
     process.exit(1);
   }
-};
+}
 
-startServer();
+bootstrap();

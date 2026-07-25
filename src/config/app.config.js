@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
     env: process.env.NODE_ENV || 'development',
-    port: parseInt(process.env.PORT) || 2002,
+    port: parseInt(process.env.PORT) || 9009,
     logLevel: process.env.LOG_LEVEL || 'info',
     marketTimezone: process.env.MARKET_TIMEZONE || 'Asia/Kolkata',
 
