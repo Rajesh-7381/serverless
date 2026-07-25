@@ -116,7 +116,21 @@ Deep Copy
 Creates completely independent nested objects.
 const b = JSON.parse(JSON.stringify(a)); (Works only for JSON-safe data.)
 
-# 11) 
+# 11) What is the difference between call(), apply(), and bind()?
+All three methods are used to change the value of this.
+
+call()
+Invokes the function immediately.
+Arguments are passed individually.
+
+apply()
+Invokes the function immediately.
+Arguments are passed as an array.
+
+bind()
+Does not execute immediately.
+Returns a new function.
+
 # 12) 
 # 13) 
 # 14) 
