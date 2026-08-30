@@ -188,7 +188,6 @@ const arr1 = [1, 2, 10, 3];
 //   }
 // }
 
-
 // const js = "jjvascript";
 // console.log(maxChar(js));
 // function maxChar(js){
@@ -233,8 +232,7 @@ const arr1 = [1, 2, 10, 3];
 console.log([[[1]]] + [[[2]]]);
 console.log(aaaaaa);
 // console.log(b);
-var aaaaaa = b =200;
-
+var aaaaaa = (b = 200);
 
 const employes = [
   { name: "John", dept: "backend" },
@@ -243,8 +241,8 @@ const employes = [
 ];
 
 // i want group by dept
-const groupByDept = employes.reduce((acc, curr)=> {
-  if(!acc[curr.dept]) {
+const groupByDept = employes.reduce((acc, curr) => {
+  if (!acc[curr.dept]) {
     acc[curr.dept] = [];
   }
   acc[curr.dept].push(curr);
@@ -256,22 +254,177 @@ console.log(groupByDept);
 
 // 1) When a user clicks "Logout from All Devices, the backend should perform the following steps:
 // ans:
-  // [Client] ---> POST /api/logout-all ---> [Backend API]
-  //                                           │
-  //                                           ▼
-  //                              [1. Authenticate Request]
-  //                                           │
-  //                                           ▼
-  //                            [2. DB: increment token_version]
-  //                                 (e.g., version 1 -> 2)
-  //                                           │
-  //                                           ▼
-  //                            [3. DB/Redis: Delete all Refresh Tokens]
-  //                                           │
-  //                                           ▼
-  //                             [4. Clear Cookies / Return 200 OK]
+// [Client] ---> POST /api/logout-all ---> [Backend API]
+//                                           │
+//                                           ▼
+//                              [1. Authenticate Request]
+//                                           │
+//                                           ▼
+//                            [2. DB: increment token_version]
+//                                 (e.g., version 1 -> 2)
+//                                           │
+//                                           ▼
+//                            [3. DB/Redis: Delete all Refresh Tokens]
+//                                           │
+//                                           ▼
+//                             [4. Clear Cookies / Return 200 OK]
 
 // ==================================================// interview tricky question with answer =========================
-console.log(new Date() == new Date()) // because each new Date() creates a new object, and two different objects are never equal in JavaScript, even if they represent the same date and time. Therefore, the comparison returns false.
+console.log(new Date() == new Date()); // because each new Date() creates a new object, and two different objects are never equal in JavaScript, even if they represent the same date and time. Therefore, the comparison returns false.
 console.log([] == false); // true, because when comparing an array to a boolean, JavaScript first converts the array to a primitive value. An empty array is converted to an empty string, which is then converted to false when compared to a boolean. Therefore, the comparison returns true.
 console.log([] == ![]); // true, because ![] evaluates to false, and [] is converted to an empty string, which is also falsy. Therefore, the comparison returns true.
+
+// const employees = [
+//   { name: "John Doe", position: "Software Engineer", city: "New York" },
+//   { name: "Jane Smith", position: "Product Manager", city: "Chicago" },
+//   { name: "Alice Johnson", position: "UX Designer", city: "Los Angeles" },
+//   { name: "Bob Brown", position: "Product Manager", city: "Chicago" },
+// ];
+
+// const result = employees.reduce((acc, curr) => {
+//   if (!acc[curr.position]) {
+//     acc[curr.position] = {};
+//   }
+
+//   if (!acc[curr.position][curr.city]) {
+//     acc[curr.position][curr.city] = [];
+//   }
+
+//   acc[curr.position][curr.city].push(curr);
+
+//   return acc;
+// }, {});
+
+// console.log(JSON.stringify(result, null, 2));
+
+
+
+
+// ==========================
+// currying
+console.log(infiniteAdd(1)(2)(3)(4)()); // 10
+
+function infiniteAdd(a) {
+    return function(b) {
+        if(b !== undefined) return infiniteAdd(a+b)
+            return a;
+    }
+}
+
+
+// ===============
+// throttle 
+
+
+function throttle(func,limit) {
+    let lastran;
+    let lastfunc;
+
+    return function (...args) {
+        if(!lastran) {
+            func.apply(this,args);
+            lastran = Date.now()
+        } else {
+            clearTimeout(lastfunc)
+            lastfunc = setTimeout(() => {
+                if(Date.now() - lastran >= limit){
+                    func.apply(this,args)
+                    lastran = Date.now();
+                }
+            }, limit - (Date.now() - lastran));
+        }
+    }
+}
+
+const searchinput = throttle((query)=>{
+    console.log(`Fetching results for: ${query}`);
+},300)
+
+searchinput("n")
+searchinput("nfff")
+searchinput("nffffffffff")
+
+// ===============================
+// debounce
+
+function debounce(func,delay) {
+    let timer;
+
+    return function (...args) {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            func.apply(this,args)
+        }, delay);
+    }
+}
+
+const searchinput = debounce((query)=>{
+    console.log(`Fetching results for: ${query}`);
+},300)
+
+searchinput("n")
+searchinput("nfff")
+searchinput("nffffffffff")
+
+
+// ===========
+// flattenarray
+console.log(flattenArray([1, [2, [3, 4], 5], 6])); 
+
+function flattenArray(arr) {
+    let res = [];
+    for(let i = 0;i<arr.length;i++) {
+        if(Array.isArray(arr[i])) {
+            res = res.concat(flattenArray(arr[i]))
+        } else {
+            res.push(arr[i])
+        }
+    }
+    return res
+}
+
+// ==================
+// parenthesis check 
+console.log(isValidParentheses("{[())]}")); // Output: true
+
+
+function isValidParentheses(arr) {
+    let stack = {
+        '}' : '{',
+        ']' : '[',
+        ')' : '('
+    };
+    let res = []
+
+    for(const ch of arr) {
+        if(ch == '{' || ch == '[' || ch == '(' ) {
+            res.push(ch)
+        } else if(stack[ch]) {
+            if(res.pop() !== stack[ch]) {
+                return false
+            }
+        }
+    }
+    return res.length == 0 ? true : false
+}
+
+// =========================
+// twosum
+
+console.log(twoSum([2, 7, 11, 15], 9)); 
+
+function twoSum(arr,f) {
+    let map = new Map()
+    for(let i =0;i<arr.length;i++) {
+        let complement = f - arr[i];
+        if(map.has(complement)) {
+            return [map.get(complement),i]
+        }
+
+        map.set(arr[i],i)
+    }
+    return null
+}
+
+
+// =========================
